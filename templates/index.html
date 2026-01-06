@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors-Plus 🎮</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Rock-Paper-Scissors-Plus</h1>
+            <p class="subtitle">Best of 3 rounds • Use bomb wisely! 💣</p>
+        </header>
+
+        <div class="game-info">
+            <div class="info-card">
+                <span class="label">Round</span>
+                <span class="value" id="round">1/3</span>
+            </div>
+            <div class="info-card">
+                <span class="label">Score</span>
+                <span class="value" id="score">0 - 0</span>
+            </div>
+            <div class="info-card">
+                <span class="label">Bomb</span>
+                <span class="value" id="bomb">💣 Ready</span>
+            </div>
+        </div>
+
+        <div class="chat-container" id="chatContainer">
+            <div class="message ai-message">
+                <div class="message-content">
+                    <p>🎮 Starting game...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="moves-container">
+            <button class="move-btn" data-move="rock">
+                <span class="emoji">🪨</span>
+                <span class="label">Rock</span>
+            </button>
+            <button class="move-btn" data-move="paper">
+                <span class="emoji">📄</span>
+                <span class="label">Paper</span>
+            </button>
+            <button class="move-btn" data-move="scissors">
+                <span class="emoji">✂️</span>
+                <span class="label">Scissors</span>
+            </button>
+            <button class="move-btn bomb-btn" data-move="bomb">
+                <span class="emoji">💣</span>
+                <span class="label">Bomb</span>
+            </button>
+        </div>
+
+        <div class="actions">
+            <button class="btn-secondary" id="helpBtn">❓ Help</button>
+            <button class="btn-secondary" id="resetBtn">🔄 New Game</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
